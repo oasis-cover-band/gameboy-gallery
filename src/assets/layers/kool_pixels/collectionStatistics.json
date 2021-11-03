@@ -1,0 +1,193 @@
+{
+    "Kool Pixel Power Light": {
+        "powerLights.svg": 100
+    },
+    "Screens": {
+        "regular.svg": 100
+    },
+    "Backgrounds": {
+        "basic.svg": 55,
+        "wiseTree.svg": 10,
+        "glitch.svg": 8,
+        "clouds.svg": 1,
+        "forest.svg": 16,
+        "bigTree.svg": 3,
+        "twoTree.svg": 7
+    },
+    "Platform 1": {
+        "none.svg": 96,
+        "platform1.svg": 4
+    },
+    "Platform 2": {
+        "none.svg": 90,
+        "platform2.svg": 10
+    },
+    "Platform 3": {
+        "none.svg": 86,
+        "platform3.svg": 14
+    },
+    "Platform 4": {
+        "none.svg": 87,
+        "platform4.svg": 13
+    },
+    "Platform 5": {
+        "none.svg": 91,
+        "platform5.svg": 9
+    },
+    "Platform 6": {
+        "none.svg": 87,
+        "platform6.svg": 13
+    },
+    "Platform 7": {
+        "none.svg": 90,
+        "platform7.svg": 10
+    },
+    "Platform 8": {
+        "none.svg": 88,
+        "platform8.svg": 12
+    },
+    "Platform 9": {
+        "none.svg": 92,
+        "platform9.svg": 8
+    },
+    "Grass": {
+        "none.svg": 77,
+        "grass.svg": 12,
+        "wheat.svg": 6,
+        "tallGrass.svg": 5
+    },
+    "Signs": {
+        "none.svg": 69,
+        "huehue.svg": 8,
+        "flavortowne.svg": 6,
+        "711concrete.svg": 8,
+        "711wood.svg": 9
+    },
+    "Grounds": {
+        "dirt.svg": 8,
+        "desert.svg": 83,
+        "rocky.svg": 9
+    },
+    "Power Box": {
+        "none.svg": 61,
+        "pepe.svg": 7,
+        "smiley.svg": 32
+    },
+    "Mystery Box": {
+        "none.svg": 88,
+        "mystery.svg": 12
+    },
+    "You": {
+        "you.svg": 100
+    },
+    "Mouthes": {
+        "grimace.svg": 60,
+        "laserTeeth.svg": 3,
+        "straightFace.svg": 6,
+        "goldGrillz.svg": 13,
+        "smiling.svg": 7,
+        "goldTeeth.svg": 4,
+        "tongueOut.svg": 7
+    },
+    "Headgear": {
+        "knight.svg": 6,
+        "coolGuy.svg": 19,
+        "bigBrainPepe.svg": 20,
+        "ultra.svg": 2,
+        "coolerGuy.svg": 22,
+        "mememotoMemosashi.svg": 4,
+        "coolestGuy.svg": 9,
+        "gingerTurtles.svg": 7,
+        "ghastly.svg": 2,
+        "feline.svg": 2,
+        "robotica.svg": 1,
+        "monk.svg": 2,
+        "starEyes.svg": 2,
+        "badHockeyPlayer.svg": 1,
+        "heckoMenn.svg": 1
+    },
+    "Hairs": {
+        "mullet.svg": 8,
+        "fanBun.svg": 11,
+        "warHawk.svg": 60,
+        "surf.svg": 11,
+        "moHawk.svg": 10
+    },
+    "Hats": {
+        "ballBBackwards.svg": 12,
+        "ballB.svg": 8,
+        "straw.svg": 6,
+        "ballABackwards.svg": 40,
+        "ballA.svg": 11,
+        "ballC.svg": 13,
+        "cowboy.svg": 5,
+        "ballCBackwards.svg": 2,
+        "beanie.svg": 3
+    },
+    "Bottoms": {
+        "shorts.svg": 92,
+        "pants.svg": 8
+    },
+    "Tops": {
+        "tee.svg": 6,
+        "none.svg": 75,
+        "robe.svg": 13,
+        "muscleshirt.svg": 6
+    },
+    "Back Gear": {
+        "none.svg": 70,
+        "excalibur.svg": 11,
+        "backpack.svg": 10,
+        "cape.svg": 9
+    },
+    "Cat": {
+        "none.svg": 93,
+        "cat.svg": 7
+    },
+    "Doge": {
+        "trulyDoge.svg": 32,
+        "none.svg": 68
+    },
+    "Doggaso": {
+        "none.svg": 94,
+        "paintDog.svg": 6
+    },
+    "Soda": {
+        "none.svg": 89,
+        "soda.svg": 11
+    },
+    "Statue": {
+        "none.svg": 90,
+        "statue.svg": 10
+    },
+    "Cookie": {
+        "none.svg": 93,
+        "cookie.svg": 7
+    },
+    "Cigarette": {
+        "none.svg": 91,
+        "cigarette.svg": 9
+    },
+    "Blobbert": {
+        "blobby.svg": 100
+    },
+    "Kool Pixel Frame": {
+        "regular.svg": 100
+    },
+    "Kool Pixel": {
+        "colored.svg": 100
+    },
+    "Kool Pixel Shadows": {
+        "shadows.svg": 100
+    },
+    "Kool Pixel Start Button": {
+        "regular.svg": 100
+    },
+    "Kool Pixel A+B Buttons": {
+        "differentColor.svg": 92,
+        "sameColor.svg": 8
+    },
+    "Kool Pixel Keypad": {
+        "keypad.svg": 100
+    }
+}

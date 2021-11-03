@@ -1,0 +1,45 @@
+@import '../app/colors.scss';
+:host {
+    grid-area:app-root;
+    max-height:100vh;
+    min-height:100vh;
+    max-width:100vw;
+    min-width:100vw;
+    display:grid;
+    grid-template-areas: 'main';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+        main {
+            justify-self:stretch;
+            align-self:stretch;
+            // pointer-events: none!important;
+            grid-area: main;
+            grid-template-areas: 'router-outlet';
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            justify-items: start;
+            justify-content: start;
+            align-items: start;
+            align-content: start;
+            overflow:hidden;
+            overflow-y:scroll;
+            ::ng-deep {
+                router-outlet + * {
+                    grid-area: router-outlet;
+                }
+                router-outlet ~ * {
+                    grid-area: router-outlet;
+                }
+        }
+    }
+    app-notifier {
+        grid-area:content;
+        align-self:end;
+        justify-self:center;
+        z-index:10;
+        pointer-events: none;
+    }
+}

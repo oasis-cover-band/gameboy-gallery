@@ -1,0 +1,79 @@
+:host {
+    min-height:100vh;
+    min-width:100vw;
+    max-height:100vh;
+    max-width:100vw;
+    display:grid;
+    grid-template-areas: 'bg';
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+    position:fixed;
+    section.background {
+        min-height:100vh;
+        min-width:100vw;
+        max-height:100vh;
+        max-width:100vw;
+        grid-area: bg;
+        animation-timing-function: linear;
+        &#stars {
+            background: url('../../assets/layers/stars/stars.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+            animation: scrollUp 3 * 3 * 3 * 16.18 * 1.618s infinite;
+        }
+        &#dust {
+            background: url('../../assets/layers/dust/dust.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+            animation: scrollUp 3 * 16.18 * 1.618s infinite reverse;
+            opacity: 0.1;
+        }
+        &#dust1 {
+            background: url('../../assets/layers/dust/dust1.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+            animation: scrollUp 3 * 3 * 16.18 * 1.618s infinite reverse;
+            opacity: 0.3;
+        }
+        &#nebula {
+            background: url('../../assets/layers/nebula/nebula.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+            animation: scrollUp 16.18 * 1.618s infinite;
+        }
+        &#nebula1 {
+            background: url('../../assets/layers/nebula/nebula1.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+            animation: scrollUp 3 * 16.18 * 1.618s infinite;
+        }
+        &#planets {
+            background: url('../../assets/layers/planets/planets.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+        }
+        &#planets1 {
+            background: url('../../assets/layers/planets/planets1.png');
+            background-size:3000px 12000px;
+            background-repeat:repeat;
+            animation: scrollUp 3 * 3 * 3 * 16.18 * 1.618s infinite;
+        }
+        &#planets2 {
+            background: url('../../assets/layers/planets/planets2.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+            animation: scrollUp 3 * 16.18 * 1.618s infinite;
+        }
+        &#planets3 {
+            background: url('../../assets/layers/planets/planets3.png');
+            background-size:3000px 3000px;
+            background-repeat:repeat;
+            animation: scrollUp 16.18 * 1.618s infinite;
+        }
+        @keyframes scrollUp {
+            100% {
+                background-position:50% 150%;
+            }
+        }
+    }
+}
