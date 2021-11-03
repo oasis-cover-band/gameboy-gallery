@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Collection } from '../classes/collection';
 import { FileReaderService } from './file-reader.service';
+import { Subscription } from 'rxjs';
+import { NFT } from '../classes/nft/nft';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +22,8 @@ export class AppService {
     }
   ]
   constructor(
-    private fileReaderService: FileReaderService
+    private fileReaderService: FileReaderService,
+    private router: Router
   ) { }
 
   loadCollections(): void {
@@ -30,36 +34,30 @@ export class AppService {
 
   loadCollection(collection: Collection, collectionIndex: number): void {
     for (let collectionItemIndex = 0; collectionItemIndex < collection.size; collectionItemIndex++) {
-      this.loadItemsFromCollectionDirectoryIntoCollection(collection, collectionItemIndex);
+      this.collections[collectionIndex].items.length = this.collections[collectionIndex].size;
+      this.loadItemsFromCollectionDirectoryIntoCollection(collectionIndex, collectionItemIndex);
       
     }
   }
 
-  loadItemsFromCollectionDirectoryIntoCollection(collection: Collection, collectionItemIndex: number): void {
-    this.loadImage0IntoItems(collection, collectionItemIndex);
-    this.loadImage1IntoItems(collection, collectionItemIndex);
-    this.loadJSONIntoItems(collection, collectionItemIndex);
+  loadItemsFromCollectionDirectoryIntoCollection(collectionIndex: number, collectionItemIndex: number): void {
+    this.loadJSONIntoItems(collectionIndex, collectionItemIndex);
   }
 
-  loadImage0IntoItems(collection: Collection, collectionItemIndex: number): void {
-    this.fileReaderService.getText(collection.directory + collectionItemIndex +'.png').then(
+  loadJSONIntoItems(collectionIndex: number, collectionItemIndex: number): void {
+    const tempSubscription: Subscription = this.fileReaderService.getText(this.collections[collectionIndex].directory + collectionItemIndex +'.json').subscribe(
       (textOutput: string) => {
-        collection.items[collectionItemIndex].image0 = textOutput;
-    });
-  }
-
-  loadImage1IntoItems(collection: Collection, collectionItemIndex: number): void {
-    this.fileReaderService.getText(collection.directory + collectionItemIndex +'.svg').then(
-      (textOutput: string) => {
-        collection.items[collectionItemIndex].image1 = textOutput;
-    });
-  }
-
-  loadJSONIntoItems(collection: Collection, collectionItemIndex: number): void {
-    this.fileReaderService.getText(collection.directory + collectionItemIndex +'.json').then(
-      (textOutput: string) => {
-        console.dir(textOutput);
-        collection.items[collectionItemIndex].metadata = textOutput;
+        // console.dir(textOutput);
+        let emptyNFT: NFT = {
+          metadata: {}
+        }
+        console.dir(this.collections[collectionIndex].items[collectionItemIndex]);
+        this.collections[collectionIndex].items[collectionItemIndex] = emptyNFT;
+        this.collections[collectionIndex].items[collectionItemIndex].metadata = JSON.parse(textOutput);
+        if (collectionIndex < this.collections.length && collectionItemIndex < this.collections[collectionIndex].size) {
+          this.router.navigateByUrl('home');
+        }
+        tempSubscription.unsubscribe();
     });
   }
 

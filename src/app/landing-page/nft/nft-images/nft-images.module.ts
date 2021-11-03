@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameboyComponent } from './gameboy.component';
+import { NftImagesComponent } from './nft-images.component';
 
 
 
 @NgModule({
   declarations: [
-    GameboyComponent
+    NftImagesComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    NftImagesComponent
   ]
 })
-export class GameboyModule { }
+export class NftImagesModule { }

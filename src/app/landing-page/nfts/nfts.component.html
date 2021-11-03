@@ -1,0 +1,5 @@
+<ng-container *ngFor="let collection of this.collections; let collectionIndex = index">
+    <ng-container *ngFor="let item of collection.items; let itemIndex = index">
+        <app-nft [collectionIndex]="collectionIndex" [itemIndex]="itemIndex" [metadata]="item.metadata"></app-nft>
+    </ng-container>
+</ng-container>

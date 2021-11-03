@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LandingPageComponent } from './landing-page.component';
+import { NftsModule } from './nfts/nfts.module';
 
 
 
@@ -9,7 +10,11 @@ import { LandingPageComponent } from './landing-page.component';
     LandingPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NftsModule
+  ],
+  exports: [
+    LandingPageComponent
   ]
 })
 export class LandingPageModule { }

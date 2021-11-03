@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GameboyComponent } from './gameboy.component';
+import { NftComponent } from './nft.component';
 
-describe('GameboyComponent', () => {
-  let component: GameboyComponent;
-  let fixture: ComponentFixture<GameboyComponent>;
+describe('NftComponent', () => {
+  let component: NftComponent;
+  let fixture: ComponentFixture<NftComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GameboyComponent ]
+      declarations: [ NftComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GameboyComponent);
+    fixture = TestBed.createComponent(NftComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

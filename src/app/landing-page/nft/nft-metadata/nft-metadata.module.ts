@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoadingPageComponent } from './loading-page.component';
+import { NftMetadataComponent } from './nft-metadata.component';
 
 
 
 @NgModule({
   declarations: [
-    LoadingPageComponent
+    NftMetadataComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    LoadingPageComponent
+    NftMetadataComponent
   ]
 })
-export class LoadingPageModule { }
+export class NftMetadataModule { }
