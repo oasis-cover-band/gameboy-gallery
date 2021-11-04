@@ -5,4 +5,5 @@ export class Collection {
     directory!: string;
     size!: number;
     items!: NFT[];
+    statistics!: any;
 }

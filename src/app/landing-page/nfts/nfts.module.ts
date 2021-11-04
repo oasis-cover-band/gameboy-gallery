@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NftsComponent } from './nfts.component';
 import { NftModule } from '../nft/nft.module';
 import { IncludePipe } from './include.pipe';
+import { LoadingPageModule } from 'src/app/loading-page/loading-page.module';
 
 
 
@@ -13,7 +14,8 @@ import { IncludePipe } from './include.pipe';
   ],
   imports: [
     CommonModule,
-    NftModule
+    NftModule,
+    LoadingPageModule
   ],
   exports: [
     NftsComponent

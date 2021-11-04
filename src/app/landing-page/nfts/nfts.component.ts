@@ -9,9 +9,11 @@ import { BehaviorSubject } from 'rxjs';
   selector: 'app-nfts',
   templateUrl: './nfts.component.html',
   styleUrls: ['./nfts.component.scss'],
+  animations: [fadeAnimations]
 })
 export class NftsComponent implements OnInit {
 
+  loaded: BehaviorSubject<boolean> = this.appService.loaded;
   collections = this.appService.collections;
   searchCriteria: BehaviorSubject<string> = this.searchService.searchCriteria;
   constructor(

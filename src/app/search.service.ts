@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SearchService {
 
-  searchCriteria: BehaviorSubject<string> = new BehaviorSubject<string>('empty');
+  searchCriteria: BehaviorSubject<string> = new BehaviorSubject<string>('');
   searchHidden: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
 
   constructor() { }

@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchBarModule } from './search-bar/search-bar.module';
+import { SocialsModule } from './socials/socials.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchBarModule } from './search-bar/search-bar.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    SearchBarModule
+    SearchBarModule,
+    SocialsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

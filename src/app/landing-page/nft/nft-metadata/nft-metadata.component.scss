@@ -4,13 +4,15 @@
     justify-content: stretch;
     justify-items: stretch;
     table {
-        justify-self: center;
+        justify-self: stretch;
         th {
             font-family: 'Old School Adventures';
             font-variant-caps: all-petite-caps;
         }
         td {
-            font-family: 'Super Legend Boy';
+            font-family: 'Mozart';
+            min-width: 20vw;
+            font-size:1.25rem;
         }
         tr {
             &:nth-of-type(odd) {

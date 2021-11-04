@@ -7,13 +7,35 @@
     min-width:100vw;
     display:grid;
     grid-template-areas:
+    'mininav'
     'main'
     'search';
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr max-content;
+    grid-template-rows: max-content 1fr max-content;
     margin:0px;
     padding:0px;
     overflow:hidden;
+    align-items: start;
+    align-content: start;
+    span.mininav {
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-area:mininav;
+        display:grid;
+        grid-auto-flow: column;
+        column-gap:20px;
+        grid-auto-columns: max-content;
+        grid-auto-rows: max-content;
+        @media (max-width:600px) {
+            h2 {
+                display:none;
+            }
+        }
+    }
         main {
             justify-self:stretch;
             align-self:stretch;

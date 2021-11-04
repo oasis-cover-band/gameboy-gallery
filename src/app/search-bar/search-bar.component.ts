@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { fadeAnimations } from '../../animations';
 import { SearchService } from '../search.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-bar',
@@ -15,13 +16,17 @@ export class SearchBarComponent implements OnInit {
   placeholderText = 'Enter your Search';
   searchHidden: BehaviorSubject<boolean> = this.searchService.searchHidden;
   constructor(
-    private searchService: SearchService
+    private searchService: SearchService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
   alertSearchService(event: any): void {
+    if (this.router.url !== '') {
+      this.router.navigateByUrl('');
+    }
     this.searchService.searchCriteria.next(this.inputElement.nativeElement.value);
   }
 

@@ -9,12 +9,19 @@ trigger('routerAnimations', [
             [
                 style({opacity: 0, pointerEvents: 'none'}),
             ],
-            { optional: true }
+            { optional: false }
             ),
+          query(
+              ':leave',
+              [
+                  animate('1s ease-out', style({position: 'absolute'})),
+              ],
+              { optional: true }
+              ),
         query(
             ':leave',
             [
-                animate('1s ease-out', style({opacity: 0, height: '0px', pointerEvents: 'none'})),
+                animate('1s ease-out', style({opacity: 0, pointerEvents: 'none'})),
             ],
             { optional: true }
             ),

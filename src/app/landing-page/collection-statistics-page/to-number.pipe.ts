@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ToNumberPipe implements PipeTransform {
 
-  transform(value: string, ...args: unknown[]): number {
-    return parseInt(value);
+  transform(value: unknown, ...args: unknown[]): number {
+    return parseInt(String(value));
   }
 
 }

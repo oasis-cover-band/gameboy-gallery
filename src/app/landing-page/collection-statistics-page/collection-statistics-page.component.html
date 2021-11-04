@@ -1,1 +1,40 @@
-<p>collection-statistics-page works!</p>
+
+
+<button class="home" (click)="home()">
+    <span>
+        HOME
+    </span>
+</button>
+
+<ng-container *ngFor="let collectionCategory of collectionStatistics; let index = index">
+    <table>
+            <h3>{{collectionStatisticsName[index]}}</h3>
+        <tr>
+            <th>Value</th>
+            <th>Trait Count</th>
+        </tr>
+
+        <tr [ngClass]="{
+            'based': ((key.value) | toNumber) < 5,
+            'super': ((key.value) | toNumber) < 10,
+            'rare': ((key.value) | toNumber) < 20
+        }" *ngFor="let key of collectionCategory | keyvalue; let index = index">
+            <td>
+                {{key.key}}
+            </td>
+            <td>
+                {{key.value}}
+            </td>
+        </tr>
+        <!-- <tr [ngClass]="{
+            'based': (attribute.trait_count) < 5,
+            'super': (attribute.trait_count) < 10,
+            'rare': (attribute.trait_count) < 20
+        }"*ngFor="let attribute of attributes">
+            <td>{{attribute.trait_type}}</td>
+            <td>{{attribute.value}}</td>
+            <td>{{attribute.trait_count}}</td>
+        </tr> -->
+    </table>
+
+</ng-container>

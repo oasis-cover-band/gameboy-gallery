@@ -1,13 +1,12 @@
-<h2>
-    KOOL PIXEL GALLERY
-</h2>
+<app-loading-page *ngIf="(this.loaded | async) === false" [@fadeAnimations]>
+</app-loading-page>
 
-<section class="nfts">
+<section class="nfts" *ngIf="(this.loaded | async) === true" [@fadeAnimations]>
     <ng-container *ngFor="let collection of this.collections; let collectionIndex = index">
         <ng-container *ngFor="let item of collection.items; let collectionItemIndex = index">
             <app-nft 
-            *ngIf="(collectionItemIndex | include: (this.searchCriteria | async)) === true ||
-            (this.searchCriteria | async) === 'empty' && item?.metadata"
+            *ngIf="((collectionItemIndex | include: (this.searchCriteria | async)) === true ||
+            (this.searchCriteria | async) === '') && item?.metadata"
             class="clickable" (click)="goToNFT(collectionIndex, collectionItemIndex)" [collectionIndex]="collectionIndex" [collectionItemIndex]="collectionItemIndex" [metadata]="item?.metadata" [collectionDirectory]="collection.directory"></app-nft>
         </ng-container>
     </ng-container>

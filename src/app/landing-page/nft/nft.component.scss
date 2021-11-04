@@ -2,8 +2,8 @@
 
 :host {
     position:relative;
-    min-height:300px;
-    min-width:300px;
+    min-height:250px;
+    min-width:250px;
     max-height:100%;
     max-width:100%;
     display:grid;
@@ -24,7 +24,7 @@
         grid-area:nft-metadata;
     }
     span.number {
-        font-family: 'Super Legend Boy';
+        font-family: 'Eight Bit Dragon';
         grid-area:nft-number;
         display:grid;
         justify-content: center;
@@ -37,6 +37,7 @@
         font-size:0.75rem;
         min-height:75px;
         max-height:75px;
+        font-variant-caps: all-petite-caps;
     }
     button.home {
         display:none;
@@ -74,7 +75,6 @@
         &:after {
             display:none;
         }
-        overflow-y:scroll;
         span.number {
             padding-top:10px;
             max-height:250px;
@@ -83,6 +83,9 @@
         button.home {
             display:grid;
         }
+        overflow-y:visible;
+        min-width:100vw;
+        max-width:100vw;
     }
     &.rendered {
         opacity: 1;
