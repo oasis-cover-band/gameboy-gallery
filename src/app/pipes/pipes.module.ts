@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchBarComponent } from './search-bar.component';
+import { IsSVGPipe } from './is-svg.pipe';
 
 
 
 @NgModule({
   declarations: [
-    SearchBarComponent
+    IsSVGPipe
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    IsSVGPipe
   ]
 })
-export class SearchBarModule { }
+export class PipesModule { }

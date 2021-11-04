@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationMenuComponent } from './navigation-menu.component';
+import { SearchBarComponent } from './search-bar.component';
 
 
 
 @NgModule({
   declarations: [
-    NavigationMenuComponent
+    SearchBarComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SearchBarComponent
   ]
 })
-export class NavigationMenuModule { }
+export class SearchBarModule { }

@@ -1,24 +1,36 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { AppService } from 'src/app/services/app.service';
+import { Component, OnInit, Input, AfterViewInit, HostBinding } from '@angular/core';
+import { fadeAnimations } from 'src/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nft',
   templateUrl: './nft.component.html',
-  styleUrls: ['./nft.component.scss']
+  styleUrls: ['./nft.component.scss'],
+  animations: [fadeAnimations]
 })
-export class NftComponent implements OnInit {
+export class NftComponent implements OnInit, AfterViewInit {
 
-  @Input() routed: boolean = false;
-  @Input() itemIndex!: number;
+  @HostBinding('class.routed') @Input() routed: boolean = false;
+  @Input() collectionItemIndex!: number;
   @Input() collectionIndex!: number;
-  @Input() metadata!: {};
+  @Input() collectionDirectory!: string;
+  @Input() metadata!: any;
+  @HostBinding('class.rendered') rendered: boolean = false;
 
   constructor(
-    private appService: AppService
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    console.dir(this.metadata);
   }
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.rendered = true;
+    }, 2000 + (500 * this.collectionItemIndex) * this.collectionIndex);
+  }
+
+  home(): void {
+    this.router.navigateByUrl('home');
+  }
 }

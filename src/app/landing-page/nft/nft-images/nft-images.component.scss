@@ -1,0 +1,18 @@
+:host {
+    min-height:100%;
+    min-width:100%;
+    max-height:100%;
+    max-width:100%;
+    display:grid;
+    grid-template-areas:
+    'images';
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+    img {
+        grid-area:images;
+        justify-self: center;
+        &.routed {
+            min-height:2000px;
+        }
+    }
+}

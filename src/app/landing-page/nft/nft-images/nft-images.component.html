@@ -1,1 +1,15 @@
-<p>nft-images works!</p>
+<!-- <ng-container *ngIf="this.image0 !== undefined && !(this.image0 | isSVG)">
+<img src="../../../../{{collectionDirectory}}{{this.image0}}" />
+</ng-container>
+
+<ng-container *ngIf="this.image1 !== undefined && (this.image1 | isSVG)">
+    <img src="../../../../{{collectionDirectory}}{{this.image1}}" />
+</ng-container> -->
+
+<ng-container *ngIf="this.image0 !== undefined && !this.routed">
+    <img src="../../../../{{collectionDirectory}}{{this.image0}}" />
+    </ng-container>
+    
+<ng-container *ngIf="this.image1 !== undefined && this.routed">
+    <img class="routed" src="../../../../{{collectionDirectory}}{{this.image1}}" />
+</ng-container>

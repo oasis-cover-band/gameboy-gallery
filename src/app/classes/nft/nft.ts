@@ -1,3 +1,3 @@
 export class NFT {
-    metadata!: {};
+    metadata!: any;
 }

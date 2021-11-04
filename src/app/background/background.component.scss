@@ -1,4 +1,9 @@
 :host {
+    z-index:-100000;
+    pointer-events: none;
+    * {
+        pointer-events: none;
+    }
     min-height:100vh;
     min-width:100vw;
     max-height:100vh;

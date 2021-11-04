@@ -1,18 +1,90 @@
+@import '../../colors.scss';
+
 :host {
+    position:relative;
     min-height:300px;
     min-width:300px;
     max-height:100%;
     max-width:100%;
     display:grid;
     grid-template-areas:
+    'home'
+    'nft-number'
     'nft-images'
-    'nft-metadata';
+    'nft-metadata'
+    'click-to-view';
     grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content;
+    grid-template-rows: max-content max-content max-content max-content max-content;
+    background:$black;
+    overflow:hidden;
     app-nft-images {
         grid-area:nft-images;
     }
     app-nft-metadata {
         grid-area:nft-metadata;
+    }
+    span.number {
+        font-family: 'Super Legend Boy';
+        grid-area:nft-number;
+        display:grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        font-size:0.75rem;
+        min-height:75px;
+        max-height:75px;
+    }
+    button.home {
+        display:none;
+        grid-area:home;
+    }
+    transition: 1s;
+    opacity: 0;
+    &:after {
+        transition: 0.25s;
+        content:'Click to View';
+        opacity:0;
+        pointer-events: all;
+        position:absolute;
+        top:0px;
+        right:0px;
+        left:0px;
+        bottom:0px;
+        background:$black;
+        font-family: 'Super Legend Boy';
+        display:grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+    &:hover {
+        &:after {
+            opacity:1;
+        }
+    }
+    border:10px solid $white;
+    &.routed {
+        border:0px solid rgba(0,0,0,0);
+        &:after {
+            display:none;
+        }
+        overflow-y:scroll;
+        span.number {
+            padding-top:10px;
+            max-height:250px;
+            font-size:2rem;
+        }
+        button.home {
+            display:grid;
+        }
+    }
+    &.rendered {
+        opacity: 1;
     }
 }

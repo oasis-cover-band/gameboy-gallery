@@ -4,6 +4,8 @@ import { LoadingPageComponent } from './loading-page/loading-page.component';
 import { LoadingPageModule } from './loading-page/loading-page.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingPageModule } from './landing-page/landing-page.module';
+import { SingleNftPageComponent } from './landing-page/single-nft-page/single-nft-page.component';
+import { SingleNftPageModule } from './landing-page/single-nft-page/single-nft-page.module';
 
 const routes: Routes = [
   {
@@ -11,6 +13,9 @@ const routes: Routes = [
   },
   {
     path: 'home', component: LandingPageComponent
+  },
+  {
+    path: 'view-nft/:collectionIndex/:collectionItemIndex', component: SingleNftPageComponent
   }
 ];
 
@@ -18,7 +23,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     LoadingPageModule,
-    LandingPageModule
+    LandingPageModule,
+    SingleNftPageModule
   ],
   exports: [RouterModule]
 })

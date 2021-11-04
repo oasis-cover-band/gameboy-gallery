@@ -1,0 +1,37 @@
+@import '../../../colors.scss';
+:host {
+    display:grid;
+    justify-content: stretch;
+    justify-items: stretch;
+    table {
+        justify-self: center;
+        th {
+            font-family: 'Old School Adventures';
+            font-variant-caps: all-petite-caps;
+        }
+        td {
+            font-family: 'Super Legend Boy';
+        }
+        tr {
+            &:nth-of-type(odd) {
+            background:$white;
+            color:$black;
+            }
+            &:hover {
+                filter:brightness(0.8);
+            }
+            &.rare {
+                background:$blue;
+                color:$black;
+            }
+            &.super {
+                background:$tertiary;
+                color:$black;
+            }
+            &.based {
+                background:$green;
+                color:$black;
+            }
+        }
+    }
+}

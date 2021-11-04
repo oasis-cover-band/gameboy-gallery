@@ -16,7 +16,7 @@ export class AppService {
   ] = [
     {
       name: 'Kool Pixels',
-      directory: '../../assets/kool_pixels/',
+      directory: '/assets/kool_pixels/',
       size: 100,
       items: []
     }
@@ -45,13 +45,11 @@ export class AppService {
   }
 
   loadJSONIntoItems(collectionIndex: number, collectionItemIndex: number): void {
-    const tempSubscription: Subscription = this.fileReaderService.getText(this.collections[collectionIndex].directory + collectionItemIndex +'.json').subscribe(
+    const tempSubscription: Subscription = this.fileReaderService.getText('../..' + this.collections[collectionIndex].directory + collectionItemIndex +'.json').subscribe(
       (textOutput: string) => {
-        // console.dir(textOutput);
         let emptyNFT: NFT = {
           metadata: {}
         }
-        console.dir(this.collections[collectionIndex].items[collectionItemIndex]);
         this.collections[collectionIndex].items[collectionItemIndex] = emptyNFT;
         this.collections[collectionIndex].items[collectionItemIndex].metadata = JSON.parse(textOutput);
         if (collectionIndex < this.collections.length && collectionItemIndex < this.collections[collectionIndex].size) {

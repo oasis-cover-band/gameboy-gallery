@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NftMetadataComponent } from './nft-metadata.component';
+import { ToNumberPipe } from './to-number.pipe';
 
 
 
 @NgModule({
   declarations: [
-    NftMetadataComponent
+    NftMetadataComponent,
+    ToNumberPipe
   ],
   imports: [
     CommonModule

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NftImagesComponent } from './nft-images.component';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 
 
@@ -9,7 +10,8 @@ import { NftImagesComponent } from './nft-images.component';
     NftImagesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PipesModule
   ],
   exports: [
     NftImagesComponent

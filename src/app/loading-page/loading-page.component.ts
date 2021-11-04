@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../services/app.service';
 
 @Component({
   selector: 'app-loading-page',
@@ -9,11 +8,9 @@ import { AppService } from '../services/app.service';
 export class LoadingPageComponent implements OnInit {
 
   constructor(
-    private appService: AppService
   ) { }
 
   ngOnInit(): void {
-    this.appService.loadCollections();
   }
 
 }

@@ -1,5 +1,14 @@
-<ng-container *ngFor="let collection of this.collections; let collectionIndex = index">
-    <ng-container *ngFor="let item of collection.items; let itemIndex = index">
-        <app-nft [collectionIndex]="collectionIndex" [itemIndex]="itemIndex" [metadata]="item.metadata"></app-nft>
+<h2>
+    KOOL PIXEL GALLERY
+</h2>
+
+<section class="nfts">
+    <ng-container *ngFor="let collection of this.collections; let collectionIndex = index">
+        <ng-container *ngFor="let item of collection.items; let collectionItemIndex = index">
+            <app-nft 
+            *ngIf="(collectionItemIndex | include: (this.searchCriteria | async)) === true ||
+            (this.searchCriteria | async) === 'empty' && item?.metadata"
+            class="clickable" (click)="goToNFT(collectionIndex, collectionItemIndex)" [collectionIndex]="collectionIndex" [collectionItemIndex]="collectionItemIndex" [metadata]="item?.metadata" [collectionDirectory]="collection.directory"></app-nft>
+        </ng-container>
     </ng-container>
-</ng-container>
+</section>

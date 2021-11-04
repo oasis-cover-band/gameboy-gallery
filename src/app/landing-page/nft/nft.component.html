@@ -1,7 +1,23 @@
-<!-- <app-nft-images
-[images]="{
-'image0': this.metadata.image0,
-'image1': this.metadata.image1 
-}"></app-nft-images> -->
+<app-nft-images
+[image0]="this.metadata?.properties?.files[0].uri"
+[image1]="this.metadata?.properties?.files[1].uri"
+[collectionDirectory]="this.collectionDirectory"
+[routed]="this.routed"
+>
+</app-nft-images>
 
-<app-nft-metadata *ngIf="this.routed === true"></app-nft-metadata>
+<app-nft-metadata 
+[metadata]="this.metadata"
+*ngIf="this.routed === true"
+></app-nft-metadata>
+
+<span class="number">
+    {{this.metadata.name}}
+</span>
+
+
+<button class="home" (click)="home()">
+    <span>
+        HOME
+    </span>
+</button>

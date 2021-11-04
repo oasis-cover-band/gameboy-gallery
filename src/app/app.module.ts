@@ -4,8 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BackgroundModule } from './background/background.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchBarModule } from './search-bar/search-bar.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    BackgroundModule,
-    HttpClientModule
+    HttpClientModule,
+    SearchBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

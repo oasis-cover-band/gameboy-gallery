@@ -7,21 +7,21 @@ trigger('routerAnimations', [
         query(
             ':enter',
             [
-                style({transform:'translateY(100vh)', pointerEvents: 'none'}),
+                style({opacity: 0, pointerEvents: 'none'}),
             ],
             { optional: true }
             ),
         query(
             ':leave',
             [
-                animate('1s ease-out', style({transform:'translateY(-100vh)', height: '0px', pointerEvents: 'none'})),
+                animate('1s ease-out', style({opacity: 0, height: '0px', pointerEvents: 'none'})),
             ],
             { optional: true }
             ),
         query(
             ':enter',
             [
-                animate('1s ease-out', style({transform:'translateY(0vh)'})),
+                animate('1s ease-out', style({opacity: 1})),
             ],
             { optional: true }
             )
@@ -44,7 +44,7 @@ trigger(
       ':leave',
       [
         style({ opacity: 1 }),
-        animate('0.25s ease-in',
+        animate('1s ease-in',
                 style({ opacity: 0 }))
       ]
     )

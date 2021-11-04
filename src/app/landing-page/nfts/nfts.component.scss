@@ -1,0 +1,32 @@
+:host {
+    min-height:100%;
+    min-width:100%;
+    max-height:100%;
+    max-width:100%;
+    display:grid;
+    grid-template-areas:
+    '.'
+    'title'
+    'nfts';
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px max-content max-content;
+    row-gap:20px;
+    h2 {
+        grid-area:title;
+        text-align: center;
+    }
+    section.nfts {
+        grid-area: nfts;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+        // @media (min-height: 1500px) {
+        //     grid-template-columns: repeat(auto-fit, minmax(280px, 500px));
+        // }
+        grid-auto-rows: minmax(350px, 350px);
+        row-gap:20px;
+        column-gap:20px;
+        grid-auto-flow: row;
+        justify-content: center;
+        justify-items: center;
+    }
+}
