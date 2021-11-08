@@ -19,7 +19,7 @@ export class AppService {
   ] = [
     {
       name: 'Kool Pixels',
-      directory: '/assets/kool_pixels/',
+      directory: '/assets/collections/kool_pixels/',
       size: 100,
       items: [],
       statistics: {}
